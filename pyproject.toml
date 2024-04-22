@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "python-cli-starter"
+version = "0.1.0"
+description = ""
+authors = ["Ayman Farhat"]
+readme = "README.md"
+packages = [
+    { include = "*", from = "src"}
+]
+
+[tool.poetry.scripts]
+clistarter = "clistarter.main:main"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+click = "^8.1.7"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.1.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+black = "^24.4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
